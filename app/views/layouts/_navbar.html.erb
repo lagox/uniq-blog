@@ -13,9 +13,9 @@
           <%= link_to "Contact", contact_path %>
         </li>
       </ul>
-      <form class="navbar-search pull-left">
-       <input type="text" class="search-query span2" placeholder="Search">
-      </form>
+      <%= form_tag(search_path, method: "get", class: "navbar-search pull-left") do %>
+        <%= text_field_tag :search, nil, class: "search-query span2", placeholder: "search..." %>  
+      <% end %>
     </div>
   </div>
 </div>
