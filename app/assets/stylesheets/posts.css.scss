@@ -1,3 +1,16 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// show post page
+.show-post{
+  margin-top:20px;
+  margin-bottom:10px;
+  .post-title{
+    margin-bottom:15px;
+  }
+  .post-body{
+    font-family:Georgia;
+  }
+}
