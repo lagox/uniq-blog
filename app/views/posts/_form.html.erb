@@ -1,0 +1,21 @@
+<%= form_for(@post, html: {class: "form-horizontal"}) do |p| %>
+  <fieldset>
+    <legend>Add post</legend>
+    <%= error_messages_for(@post) %>
+    <div class="control-group">
+      <%= p.label :title, "Title:" %>
+      <div class="controls">
+        <%= p.text_field :title, placeholder: "My new post" %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= p.label :post, "Body:" %>
+      <div class="controls">
+        <%= p.text_area :post, placeholder: "About..." %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= p.submit "Add post", class: "btn btn-primary" %>
+    </div>
+  </fieldset>
+<% end %>
