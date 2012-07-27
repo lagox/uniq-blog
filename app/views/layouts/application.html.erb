@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OnlineBlog</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title><%= title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <%= render "layouts/navbar" %>
+  <div class="container">
+    <%= render "layouts/header" %>
+    <div class="row">
+      <div class="span8"><%= yield %></div>
+      <div class="span4">sidebar</div>
+    </div>
+    <%= render "layouts/footer" %>
+  </div>
 
 </body>
 </html>

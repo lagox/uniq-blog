@@ -1,0 +1,33 @@
+@import "bootstrap";
+
+
+.logo{
+  margin-top:20px;
+  margin-bottom:20px;
+  #logo_link{
+    margin-left:20px;
+    color:#686868;
+    &:hover{
+      color:#a2a2a2;
+      text-decoration:none;
+    }
+  }  
+}
+
+
+// footer
+.footer{
+  
+  margin-top:20px;
+  ul{
+    list-style-type:none;
+    li{
+      float:left;
+      margin-right:10px;
+    }
+  }
+}
+
+.clear{
+  clear:both;
+}
