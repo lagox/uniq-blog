@@ -1,4 +1,8 @@
 <% provide(:title, "Home page") %>
+<div class="sort_by_date">
+  Sort by <%= link_to_sorted icon_time, :created_at, :title => "Date" %>
+</div>
+
 <% @posts.each do |p| %>
 <div class="show-post">
   <h3 class="post-title"><%= link_to p.title, p %></h3>

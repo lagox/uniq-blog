@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   respond_to :html
   
   def index
-    @posts = Post.page(params[:page]).per(4)
+    @posts = Post.sorted(params[:sort], "created_at DESC").page(params[:page]).per(4)
     respond_with(@posts)
   end
   
