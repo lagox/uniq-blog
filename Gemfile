@@ -8,6 +8,7 @@ gem 'rails', '3.2.6'
 gem 'bootstrap-rails'
 
 group :development do
+  gem 'magic_encoding'
   gem 'awesome_print'
   gem 'sqlite3'
   gem 'rspec-rails', '2.10.0'
