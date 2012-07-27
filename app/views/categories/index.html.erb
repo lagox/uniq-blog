@@ -1,0 +1,13 @@
+<div class="categories-index">
+  <h1>Categories:</h1>
+  <% @categories.each do |c| %>
+    <div class="category-index">
+      <%= c.title %>
+      <span class="cat-actions">
+        <%= link_to "Edit", edit_category_path(c) %>
+        <%= link_to "Delete", c, :method => :delete, :confirm => "delete?" %>
+      </span>
+    </div>
+  <% end %>
+</div>
+<%= link_to "Add category", new_category_path, :class => "btn btn-primary" %>

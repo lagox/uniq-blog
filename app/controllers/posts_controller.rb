@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     if @post.save
       flash[:notice] = "Post success create"
-      respond_with(@post)
+      respond_with(@post, :location => @post)
     else
       render 'new'
     end
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update_attributes(params[:post])
       flash[:notice] = "Post success update"
-      respond_with(@post)
+      respond_with(@post, :location => @post)
     else
       render 'edit'
     end

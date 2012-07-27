@@ -16,4 +16,35 @@ module ApplicationHelper
   def icon_time
     raw("<i class='icon-time'></i>")
   end
+  
+  def find_all_subcategories(category)
+    if category.children.size > 0
+      ret = "<ul>"
+      category.children.each { |subcat|
+        if subcat.children.size > 0
+          ret += "<li class='closed'>"
+          ret += "<span class='folder sub'>"
+          ret += link_to subcat.title, subcat
+          ret += "</span>"
+          ret += find_all_subcategories(subcat)
+          ret += "</li>"
+        else
+          ret += "<li>"
+          ret += "<span class='notsubcat sub'>"
+          ret += link_to subcat.title, subcat
+          ret += '</span>'
+          ret += "</li>"
+        end
+      }
+      ret += "</ul>" 
+    end
+  end  
+  
+  def isset_subcat?(object)
+    if object.children.size > 0
+      true
+    end
+  end
+
+
 end

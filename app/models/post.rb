@@ -21,4 +21,6 @@ class Post < ActiveRecord::Base
   validates :post, presence: true
   validates :user_id, presence: true, numericality: true
   validates :category_id, presence: true, numericality: true
+  
+  belongs_to :category
 end

@@ -1,0 +1,27 @@
+<%= form_for(@category, html: {class: "form-horizontal"}) do |c| %>
+  <fieldset>
+    <legend>Add category</legend>
+    <%= error_messages_for(@category) %>
+    <div class="control-group">
+      <%= c.label :parent_id, "Parent category:" %>
+      <div class="controls">
+        <%= c.collection_select :parent_id, Category.all(:order => "title"), :id, :title, :include_blank => true %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= c.label :title, "Title:" %>
+      <div class="controls">
+        <%= c.text_field :title, placeholder: "My new category" %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= c.label :description, "description:" %>
+      <div class="controls">
+        <%= c.text_area :description, placeholder: "About..." %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= c.submit "Add category", class: "btn btn-primary" %>
+    </div>
+  </fieldset>
+<% end %>

@@ -48,3 +48,20 @@
     text-align:right;
   }
 }
+
+.content-categories{
+  // border:1px solid #ccc;
+  margin-top:10px;
+  padding:5px;
+}
+#menutree{
+  font-size:14px;
+  list-style-type:none;
+  li{
+    margin-bottom:10px;
+  }
+  ul {
+    list-style-type:none;
+    margin-top:7px;
+  }
+}
