@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'spec_helper'
 
 describe "Posts" do
@@ -8,7 +9,6 @@ describe "Posts" do
     before { visit root_path }
     
     it { should have_selector("title", text: "Home page") }
-  end
-  
+  end  
 
 end
