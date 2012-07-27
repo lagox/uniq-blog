@@ -11,6 +11,16 @@
   <div class="container">
     <%= render "layouts/header" %>
     <div class="row">
+      <div class="span12">
+        <% if notice %>
+        <div class="alert notice">
+          <a class="close" data-dismiss="alert" href="#">×</a>
+          <%= notice %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
       <div class="span9"><%= yield %></div>
       <%= render "layouts/sidebar" %>
     </div>

@@ -1,0 +1,13 @@
+<h2>Your search query: <span id="find-query"><%= params[:search] %></span></h2>
+
+<div class="result-block">
+   <% @results.each do |r| %>
+    <div class="show-post">
+    <h3 class="post-title"><%= link_to r.title, r %></h3>
+    <div class="post-body"><%= r.post %></div>
+    <div class="post-info">
+      <%= r.created_at.to_formatted_s(:short)  %>
+    </div>
+   </div>
+   <% end %>
+</div>

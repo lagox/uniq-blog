@@ -7,6 +7,7 @@ OnlineBlog::Application.routes.draw do
   
   match "/about", to: "pages#about"
   match "/contact", to: "pages#contact"
+  match "/search", to: "search#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
