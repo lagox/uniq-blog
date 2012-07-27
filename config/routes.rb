@@ -4,6 +4,9 @@ OnlineBlog::Application.routes.draw do
   resources :posts
   
   root :to => 'posts#index'
+  
+  match "/about", to: "pages#about"
+  match "/contact", to: "pages#contact"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

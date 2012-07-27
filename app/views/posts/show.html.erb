@@ -1,5 +1,5 @@
 <div class="show-post">
   <h1 class="post-title"><%= @post.title %></h1>
   <div class="post-body"><%= @post.post %></div>
-  <div class="post-info"><%= @post.created_at %></div>
+  <div class="post-info"><%= @post.created_at.to_formatted_s(:short)  %></div>
 </div>

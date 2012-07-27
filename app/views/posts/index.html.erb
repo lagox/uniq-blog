@@ -3,7 +3,7 @@
 <div class="show-post">
   <h3 class="post-title"><%= link_to p.title, p %></h3>
   <div class="post-body"><%= p.post %></div>
-  <div class="post-info"><%= p.created_at %></div>
+  <div class="post-info"><%= p.created_at.to_formatted_s(:short) %></div>
 </div>
 <% end %>
 
