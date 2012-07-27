@@ -19,7 +19,7 @@ describe Post do
   
   before(:each) do
     @post = FactoryGirl.create(:post)
-    
+    @category = FactoryGirl.create(:category)
     
     # valid attributes
     
@@ -27,7 +27,7 @@ describe Post do
       title: "My title",
       post: "My Post",
       user_id: 1,
-      category_id: 1
+      category_id: @category.id
     }
   end
   
@@ -67,6 +67,21 @@ describe Post do
       @attr[:category_id] = "s"
       post = Post.new(@attr)
       post.should_not be_valid
+    end
+    
+  end
+  
+  describe "associations" do
+    describe "category" do
+      it "should respond to categories" do
+        post = Post.new(@attr)
+        post.should respond_to(:category)
+      end
+      
+      it "should belongs_to :category" do
+        post = Post.reflect_on_association(:category)
+        post.macro.should == :belongs_to
+      end
     end
     
   end

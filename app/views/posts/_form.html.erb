@@ -3,6 +3,12 @@
     <legend>Add post</legend>
     <%= error_messages_for(@post) %>
     <div class="control-group">
+      <%= p.label :category_id, "Category:" %>
+      <div class="controls">
+        <%= p.collection_select :category_id, Category.all(:order => "title"), :id, :title, :include_blank => false %>
+      </div>
+    </div>
+    <div class="control-group">
       <%= p.label :title, "Title:" %>
       <div class="controls">
         <%= p.text_field :title, placeholder: "My new post" %>

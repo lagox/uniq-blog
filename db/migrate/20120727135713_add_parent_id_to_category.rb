@@ -1,0 +1,6 @@
+# -*- encoding : utf-8 -*-
+class AddParentIdToCategory < ActiveRecord::Migration
+  def change
+    add_column :categories, :parent_id, :integer
+  end
+end

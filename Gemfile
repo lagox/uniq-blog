@@ -8,6 +8,8 @@ gem 'rails', '3.2.6'
 gem 'bootstrap-sass', '2.0.0'
 gem 'kaminari'
 gem 'sorted', '~> 0.4.3'
+gem "acts_as_tree", "~> 0.1.1"
+
 
 group :development do
   gem 'annotate'
