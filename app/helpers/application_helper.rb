@@ -50,7 +50,7 @@ module ApplicationHelper
   end
 
   def more_post(text)
-    raw(truncate(text, :length => 900, :separator => " ", :omission => "..."))
+    truncate(text, :length => 900, :separator => " ", :omission => "...")
   end
 
 end

@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 OnlineBlog::Application.routes.draw do
   
+  mount RedactorRails::Engine => '/redactor_rails'
+
   # auth:
   get "signup", to: "users#new", as: "signup"
   get "login", to: "sessions#new", as: "login"

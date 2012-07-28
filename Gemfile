@@ -10,6 +10,9 @@ gem 'kaminari'
 gem 'sorted', '~> 0.4.3'
 gem "acts_as_tree", "~> 0.1.1"
 gem 'acts-as-taggable-on', '~> 2.3.1'
+gem 'redactor-rails'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development do
   gem 'annotate'
@@ -53,7 +56,3 @@ gem 'heroku'
 
 # To use debugger
 # gem 'debugger'
-
-group :production do
-  gem 'pg'
-end

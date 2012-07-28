@@ -17,7 +17,8 @@
     <div class="control-group">
       <%= p.label :post, "Body:" %>
       <div class="controls">
-        <%= p.text_area :post, placeholder: "About..." %>
+        <%= p.text_area :post, :cols => 40, :rows => 15, :class => "redactor" %>
+        <%= redactor %>
       </div>
     </div>
     <div class="control-group">
