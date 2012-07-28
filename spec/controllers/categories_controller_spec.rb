@@ -6,6 +6,8 @@ describe CategoriesController do
   
   before(:each) do
     @category = FactoryGirl.create(:category)
+    @user = FactoryGirl.create(:user)
+    test_log_in(@user)
   end
   
 

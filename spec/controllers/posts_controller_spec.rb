@@ -6,6 +6,8 @@ describe PostsController do
   
   before(:each) do
     @post = FactoryGirl.create(:post)
+    @user = FactoryGirl.create(:user)
+    test_log_in(@user)
   end
   
   it "get 'index'" do
