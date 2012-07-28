@@ -20,4 +20,8 @@ private
     redirect_to login_url, notice: "Not authorized" if current_user.nil?
   end
   
+  def access_only_admin
+    redirect_to root_url, notice: "You are not admin" if current_user.admin == false
+  end
+  
 end

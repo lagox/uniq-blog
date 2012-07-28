@@ -2,6 +2,8 @@
 class CategoriesController < ApplicationController
   
   respond_to :html
+  
+  before_filter :access_only_admin, :except => [:show]
 
   def index
     @categories = Category.all

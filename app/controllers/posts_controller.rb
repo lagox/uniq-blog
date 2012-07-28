@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   
   respond_to :html
   
+  before_filter :access_only_admin, :except => [:index, :show]
+  
   def index
     @posts = Post.sorted(params[:sort], "created_at DESC").page(params[:page]).per(4)
     respond_with(@posts)
