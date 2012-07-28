@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateRedactorAssets < ActiveRecord::Migration
   def self.up
     create_table :redactor_assets do |t|

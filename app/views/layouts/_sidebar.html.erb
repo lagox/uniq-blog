@@ -1,8 +1,8 @@
 <div id="sidebar" class="span3">
   <% if current_user && current_user.admin == true %>
-    <h4><%= link_to "Categories:", categories_path %></h4>
+    <h4><%= link_to "Категории:", categories_path %></h4>
   <% else %>
-    <h4>Categories:</h4>
+    <h4>Категории:</h4>
   <% end %>
   <div class="content-categories">
     <ul id="menutree">
@@ -27,13 +27,13 @@
   </div>
   <% if current_user && current_user.admin == true %>
   <div class="button_add_post">
-    <%= link_to "Add post", new_post_path, :class => "btn btn-primary" %>
+    <%= link_to "Добавить запись", new_post_path, :class => "btn btn-primary" %>
   </div>
   <% end %>
   
   <!-- tag cloud -->
   <div class="tag-cloud">
-    <h4 class="tag-cloud-title">Tag cloud:</h4>
+    <h4 class="tag-cloud-title">Облако тегов:</h4>
     <div class="tag-cloud-content">
     <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
   <%= link_to tag.name, tags_path(tag.name), :class => css_class %>
