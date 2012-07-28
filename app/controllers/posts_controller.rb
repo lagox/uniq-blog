@@ -56,7 +56,7 @@ class PostsController < ApplicationController
   
   def tags
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag]).sorted(params[:sort], "created_at DESC").page(params[:page]).per(2)
+      @posts = Post.tagged_with(params[:tag]).sorted(params[:sort], "created_at DESC").page(params[:page]).per(4)
     else
       redirect_to root_path
     end
