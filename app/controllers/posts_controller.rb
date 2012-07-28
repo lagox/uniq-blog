@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   
   respond_to :html
   
-  before_filter :access_only_admin, :except => [:index, :show]
+  before_filter :access_only_admin, :except => [:index, :show, :tags]
   
   def index
     @posts = Post.sorted(params[:sort], "created_at DESC").page(params[:page]).per(4)
@@ -50,6 +50,16 @@ class PostsController < ApplicationController
     @post.destroy
     flash[:notice] = "Post success deleted"
     redirect_to posts_path
+  end
+  
+  # tags
+  
+  def tags
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).sorted(params[:sort], "created_at DESC").page(params[:page]).per(2)
+    else
+      redirect_to root_path
+    end
   end
   
 end

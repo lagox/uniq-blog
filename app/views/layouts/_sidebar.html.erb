@@ -30,4 +30,14 @@
     <%= link_to "Add post", new_post_path, :class => "btn btn-primary" %>
   </div>
   <% end %>
+  
+  <!-- tag cloud -->
+  <div class="tag-cloud">
+    <h4 class="tag-cloud-title">Tag cloud:</h4>
+    <div class="tag-cloud-content">
+    <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+  <%= link_to tag.name, tags_path(tag.name), :class => css_class %>
+<% end %>  
+    </div>
+  </div>
 </div>

@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
   end
   
   def show
-    @category = Category.find(params[:id])
+    @category = Category.find_by_title(params[:id])
     @posts = @category.posts.sorted(params[:sort], "created_at DESC").page(params[:page]).per(4)
     respond_with(@category)
   end
@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
   end
   
   def edit
-    @category = Category.find(params[:id])
+    @category = Category.find_by_title(params[:id])
     respond_with(@category)
   end
   
@@ -37,7 +37,7 @@ class CategoriesController < ApplicationController
   end
   
   def update
-    @category = Category.find(params[:id])  
+    @category = Category.find_by_title(params[:id])  
     if @category.update_attributes(params[:category])
       flash[:notice] = "Catregory success update"
       respond_with(@category, :location => categories_path)
@@ -47,7 +47,7 @@ class CategoriesController < ApplicationController
   end
   
   def destroy
-    @category = Category.find(params[:id])
+    @category = Category.find_by_title(params[:id])
     @category.destroy
     flash[:notice] = "Category success destroy"
     redirect_to categories_path 

@@ -21,6 +21,12 @@
       </div>
     </div>
     <div class="control-group">
+      <%= p.label :tag_list, "Tags:" %>
+      <div class="controls">
+        <%= p.text_field :tag_list %>
+      </div>
+    </div>
+    <div class="control-group">
       <div class="controls">
         <%= hidden_field_tag('post[user_id]', current_user.id ) %>
       </div>

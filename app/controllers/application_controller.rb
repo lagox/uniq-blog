@@ -3,10 +3,17 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   before_filter :load_categories
+  before_filter :tag_cloud
   
   def load_categories
     @sidebar_categories = Category.mains
   end
+  
+  # tag cloud:
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags)
+  end
+  
   
 private
   
