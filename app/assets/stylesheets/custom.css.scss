@@ -51,6 +51,9 @@
   margin-top:20px;
   h4{
     text-align:right;
+    a{
+    color:#345381;
+    }
   }
 }
 
@@ -58,6 +61,9 @@
   // border:1px solid #ccc;
   margin-top:10px;
   padding:5px;
+  a{
+    color:#345381;
+  }
 }
 #menutree{
   font-size:14px;
@@ -90,9 +96,9 @@
 
 .post-cat-title{
   a{
-    color:#595d5a;
+    color:#595d5a !important;
     &:hover{
-      color:#2d2f2e;
+      color:#2d2f2e !important;
     }
   }
 }
