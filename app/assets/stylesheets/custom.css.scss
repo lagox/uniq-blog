@@ -24,10 +24,15 @@
 
 // footer
 .footer{
-  border-top:1px solid #eee;
+  border-top:1px solid #ccc;
   padding-top:20px;
   margin-top:10px;
   margin-bottom:20px;
+  .copyright{
+    float:right;
+    font-size:11px;
+    margin-top:-10px;
+  }
   ul{
     list-style-type:none;
     li{
@@ -77,4 +82,17 @@
   color:#9ea39d;
   margin-top:11px;
   margin-right:20px;
+}
+.button_add_post{
+  margin:30px auto 10px auto;
+  width:80px;
+}
+
+.post-cat-title{
+  a{
+    color:#595d5a;
+    &:hover{
+      color:#2d2f2e;
+    }
+  }
 }

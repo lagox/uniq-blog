@@ -5,7 +5,8 @@ describe PostsController do
   render_views
   
   before(:each) do
-    @post = FactoryGirl.create(:post)
+    @category = FactoryGirl.create(:category)
+    @post = FactoryGirl.create(:post, :category => @category)
     @user = FactoryGirl.create(:user)
     test_log_in(@user)
   end

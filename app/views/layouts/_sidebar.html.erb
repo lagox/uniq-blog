@@ -1,5 +1,9 @@
 <div id="sidebar" class="span3">
-  <h4>Categories:</h4>
+  <% if current_user && current_user.admin == true %>
+    <h4><%= link_to "Categories:", categories_path %></h4>
+  <% else %>
+    <h4>Categories:</h4>
+  <% end %>
   <div class="content-categories">
     <ul id="menutree">
     <% for category in @sidebar_categories %>
@@ -19,7 +23,11 @@
       <% end %>
       
     <% end %>
-  </ul>
-    
+    </ul>  
   </div>
+  <% if current_user && current_user.admin == true %>
+  <div class="button_add_post">
+    <%= link_to "Add post", new_post_path, :class => "btn btn-primary" %>
+  </div>
+  <% end %>
 </div>

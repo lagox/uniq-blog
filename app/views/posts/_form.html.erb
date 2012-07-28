@@ -20,6 +20,11 @@
         <%= p.text_area :post, placeholder: "About..." %>
       </div>
     </div>
+    <div class="control-group">
+      <div class="controls">
+        <%= hidden_field_tag('post[user_id]', current_user.id ) %>
+      </div>
+    </div>
     <div class="form-actions">
       <%= p.submit "Add post", class: "btn btn-primary" %>
     </div>

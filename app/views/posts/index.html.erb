@@ -5,9 +5,15 @@
 
 <% @posts.each do |p| %>
 <div class="show-post">
-  <h3 class="post-title"><%= link_to p.title, p %></h3>
-  <div class="post-body"><%= p.post %></div>
+  <h3 class="post-title"><span class="post-cat-title"><%= link_to p.category.title %></span> → <%= link_to p.title, p %></h3>
+  <div class="post-body"><%= more_post(p.post) %></div>
   <div class="post-info"><%= p.created_at.to_formatted_s(:short) %></div>
+  <% if current_user && current_user.admin == true %>
+    <div class="admin-actions">
+      <%= link_to "edit", edit_post_path(p) %>
+      <%= link_to "delete", p, :method => :delete, :data => { :confirm => "delete?" } %>
+    </div>
+  <% end %>
 </div>
 <% end %>
 
