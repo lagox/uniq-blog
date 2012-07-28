@@ -2,11 +2,20 @@
 <div class="show-post">
   <h1 class="post-title"><%= link_to @post.category.title, @post.category %> → <%= @post.title %></h1>
   <div class="post-body"><%= raw(@post.post) %></div>
-  <div class="post-info"><%= @post.created_at.to_formatted_s(:short)  %></div>
-  <% if current_user && current_user.admin == true %>
+  <div class="post-info">
+    <%= @post.created_at.to_formatted_s(:short)  %>
+    <% if current_user && current_user.admin == true %>
     <div class="admin-actions">
       <%= link_to "edit", edit_post_path(@post) %>
       <%= link_to "delete", @post, :method => :delete, :data => { :confirm => "delete?" } %>
     </div>
-  <% end %>
+    <% end %>
+    <div class="clear"></div>
+  </div>
 </div>
+<h3>Комментарии:</h3>
+<div id="comments-post">
+  <%= render @post.comments %>
+</div>
+
+<%= render :file => "comments/new" %>

@@ -13,7 +13,9 @@ OnlineBlog::Application.routes.draw do
   
   resources :users
   resources :sessions
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   resources :categories
   
   root :to => 'posts#index'

@@ -18,4 +18,10 @@ FactoryGirl.define do
     password "secretpassword"
     admin true
   end
+  
+  factory :comment do
+    user_id 4
+    author "Sam"
+    comment "My comment"
+  end
 end
