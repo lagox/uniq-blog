@@ -12,5 +12,4 @@ require 'spec_helper'
 #   end
 # end
 describe SessionsHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
 end

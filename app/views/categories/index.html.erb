@@ -5,7 +5,7 @@
       <%= c.title %>
       <span class="cat-actions">
         <%= link_to "Edit", edit_category_path(c) %>
-        <%= link_to "Delete", c, :method => :delete, :confirm => "delete?" %>
+        <%= link_to "Delete", c, :method => :delete, :data => { :confirm => "delete?" } %>
       </span>
     </div>
   <% end %>

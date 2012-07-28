@@ -12,4 +12,9 @@ FactoryGirl.define do
     description "My category description"
     parent_id 1
   end
+  
+  factory :user do
+    email "foo@bar.com"
+    password "secretpassword"
+  end
 end
