@@ -1,1 +1,1 @@
-todo: write categories controller spec
+todo: write form - tags / posts

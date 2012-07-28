@@ -1,6 +1,5 @@
 @import "bootstrap";
 
-
 .logo{
   margin-top:20px;
   margin-bottom:20px;
@@ -102,3 +101,33 @@
     }
   }
 }
+
+// tags
+.post-tags{
+  margin-top:10px;
+  font-size:12px;
+  padding:5px;
+  a{
+    color:#5387d2;
+    text-decoration:underline;
+  }
+}
+
+
+// tag cloud
+.tag-cloud{
+  margin-top:20px;
+  .tag-cloud-title{
+    margin-bottom:10px;
+    text-align:right;
+  }
+  .tag-cloud-content{
+    padding:10px;
+    margin-left:30px;
+  }
+}
+
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }

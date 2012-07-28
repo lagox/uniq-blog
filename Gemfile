@@ -9,7 +9,7 @@ gem 'bootstrap-sass', '2.0.0'
 gem 'kaminari'
 gem 'sorted', '~> 0.4.3'
 gem "acts_as_tree", "~> 0.1.1"
-
+gem 'acts-as-taggable-on', '~> 2.3.1'
 
 group :development do
   gem 'annotate'

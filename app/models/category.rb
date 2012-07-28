@@ -19,6 +19,9 @@ class Category < ActiveRecord::Base
   default_scope order("title ASC")
   scope :childrens, where("parent_id IS NOT NULL")
   scope :mains, where("parent_id IS NULL")
-
+  
+  def to_param
+    title
+  end
   
 end

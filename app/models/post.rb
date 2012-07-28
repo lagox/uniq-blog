@@ -14,7 +14,7 @@
 
 # -*- encoding : utf-8 -*-
 class Post < ActiveRecord::Base
-  attr_accessible :title, :post, :user_id, :category_id
+  attr_accessible :title, :post, :user_id, :category_id, :tag_list
   
   # validates
   validates :title, presence: true
@@ -23,4 +23,7 @@ class Post < ActiveRecord::Base
   validates :category_id, presence: true, numericality: true
   
   belongs_to :category
+  
+  # tags
+  acts_as_taggable
 end

@@ -23,12 +23,12 @@ describe CategoriesController do
   end
   
   it "get 'show'" do
-    get :show, :id => @category.id
+    get :show, :id => @category.title
     response.should be_success
   end
   
   it "get 'edit'" do
-    get :edit, :id => @category.id
+    get :edit, :id => @category.title
     response.should be_success
   end
   
@@ -88,13 +88,13 @@ describe CategoriesController do
       end
       
       it "should render the edit page" do
-        put :update, :id => @category.id, :category => @attr
+        put :update, :id => @category.title, :category => @attr
         response.should render_template('edit')
       end
       
       it "should not create the category" do
         lambda do
-          put :update, :id => @category.id, :category => @attr  
+          put :update, :id => @category.title, :category => @attr  
         end.should_not change(Category, :count)
       end
       
@@ -107,18 +107,18 @@ describe CategoriesController do
       end
       
       it "should redirect_to root_path" do
-        put :update, :id => @category.id, :category => @attr
+        put :update, :id => @category.title, :category => @attr
         response.should redirect_to(categories_path)
       end
       
       it "should not create the category" do
         lambda do
-          put :update, :id => @category.id, :category => @attr  
+          put :update, :id => @category.title, :category => @attr  
         end.should_not change(Category, :count)
       end
       
       it "should have success message" do
-        put :update, :id => @category.id, :category => @attr
+        put :update, :id => @category.title, :category => @attr
         flash[:notice] =~ /Category success update/i
       end
       
