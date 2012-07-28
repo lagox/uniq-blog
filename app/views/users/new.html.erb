@@ -1,0 +1,27 @@
+<%= form_for(@user, html: {class: "form-horizontal"}) do |u| %>
+  <fieldset>
+    <legend>Sign Up</legend>
+    <%= error_messages_for(@user) %>
+    <div class="control-group">
+      <%= u.label :email, "Email:" %>
+      <div class="controls">
+        <%= u.text_field :email %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= u.label :password %>
+      <div class="controls">
+        <%= u.password_field :password %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= u.label :password_confirmation %>
+      <div class="controls">
+        <%= u.password_field :password_confirmation %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= u.submit "Sign Up", class: "btn btn-primary" %>
+    </div>
+  </fieldset>
+<% end %>
