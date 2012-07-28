@@ -6,7 +6,7 @@ describe "UserPages" do
   describe "sign up page" do
     it "should have right title" do
       visit signup_path
-      page.should have_selector("title", text: "Sign Up")    
+      page.should have_selector("title", text: "Регистрация")    
     end
     
     it "should have the form" do
@@ -16,10 +16,10 @@ describe "UserPages" do
     
     it "should sign up" do
       visit signup_path
-      fill_in "Email:", :with => "foo@bar.com"
-      fill_in "Password", :with => "secretpassword"
-      fill_in "Password confirmation", :with => "secretpassword"
-      click_button "Sign Up"
+      fill_in "Почта", :with => "foo@bar.com"
+      fill_in "Пароль", :with => "secretpassword"
+      fill_in "Потвердите пароль", :with => "secretpassword"
+      click_button "Зарегистрироваться"
       page.should have_selector("div", text: "Success sign up")
     end
   end
@@ -27,7 +27,7 @@ describe "UserPages" do
   describe "log in page" do
     it "should have the right title" do
       visit login_path
-      page.should have_selector("title", text: "Log in")
+      page.should have_selector("title", text: "Войти")
     end
     
     it "should have the form" do
