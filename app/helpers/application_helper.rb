@@ -20,6 +20,10 @@ module ApplicationHelper
     raw("<i class='icon-time'></i>")
   end
   
+  def tags_icon
+    raw("<i class='icon-tag'></i>")
+  end
+  
   def find_all_subcategories(category)
     if category.children.size > 0
       ret = "<ul>"
