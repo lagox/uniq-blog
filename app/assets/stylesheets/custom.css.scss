@@ -49,7 +49,7 @@
 #sidebar{
   margin-top:20px;
   h4{
-    text-align:right;
+    // text-align:right;
     a{
     color:#345381;
     }
@@ -59,20 +59,23 @@
 .content-categories{
   // border:1px solid #ccc;
   margin-top:10px;
-  padding:5px;
+  padding:3px;
   a{
     color:#345381;
   }
 }
 #menutree{
-  font-size:14px;
+  font-size:15px;
   list-style-type:none;
   li{
-    margin-bottom:10px;
+    margin-bottom:8px;
+    font-weight:bold;
   }
   ul {
     list-style-type:none;
     margin-top:7px;
+    margin-left:10px;
+    font-size:12px;
   }
 }
 
@@ -104,7 +107,7 @@
 
 // tags
 .post-tags{
-  margin:10px 0px;
+  margin:20px 0px 10px 0px;
   font-size:12px;
   a{
     color:#a09da6;
@@ -120,16 +123,17 @@
 .tag-cloud{
   margin-top:20px;
   .tag-cloud-title{
+    font-size:18px;
+    color:#807d86;
     margin-bottom:10px;
-    text-align:right;
+    text-align:center !important;
   }
   .tag-cloud-content{
-    padding:10px;
-    margin-left:30px;
+    padding-left:15px;
   }
 }
 
-.css1 { font-size: 1.0em; }
-.css2 { font-size: 1.2em; }
-.css3 { font-size: 1.4em; }
-.css4 { font-size: 1.6em; }
+.css1 { font-size: 0.8em; }
+.css2 { font-size: 1.0em; }
+.css3 { font-size: 1.2em; }
+.css4 { font-size: 1.4em; }
