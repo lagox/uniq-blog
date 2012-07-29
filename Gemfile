@@ -13,7 +13,7 @@ gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'redactor-rails'
 gem 'carrierwave'
 gem 'mini_magick'
-gem "rake", "~> 0.9.2.2"
+gem "rake", "0.9.2.2"
 
 
 group :development do
