@@ -1,4 +1,4 @@
-<%= provide(:title, @post.title) %>
+<%= provide(:title, "#{@post.category.title} / #{@post.title}") %>
 <div class="show-post">
   <h1 class="post-title"><%= link_to @post.category.title, @post.category %> → <%= @post.title %></h1>
   <div class="post-body"><%= raw(@post.post) %></div>

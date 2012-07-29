@@ -8,7 +8,7 @@ describe "Posts" do
   describe "home page" do
     before { visit root_path }
     
-    it { should have_selector("title", text: "Домой") }
+    it { should have_selector("title", text: "Главная") }
   end  
 
 end

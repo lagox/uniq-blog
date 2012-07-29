@@ -4,11 +4,24 @@ module ApplicationHelper
   include ActsAsTaggableOn::TagsHelper
 
   def title(page_title)
-    basetitle = "Online blog"
+    basetitle = "Блог Кусаинова Ерлана"
     if page_title.empty?
       basetitle
     else
       "#{basetitle} / #{page_title}"
+    end
+  end
+  
+  def keywords
+    "Ruby on Rails разработка, Agile, BDD, Веб-разработка, юзабилити, интерфейсы, стартап, бизнес, Git, верстка, ООП, linux, mac os x"
+  end
+  
+  def description
+    base_desc = "Блог о веб-технологиях, продуктах."
+    if @description
+      "base_desc #{@description}"
+    else
+      base_desc
     end
   end
   
