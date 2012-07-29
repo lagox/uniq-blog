@@ -17,5 +17,12 @@ FactoryGirl.define do
     email "foo@bar.com"
     password "secretpassword"
     admin true
+    name "Sam"
+  end
+  
+  factory :comment do
+    user_id 4
+    author "Sam"
+    comment "My comment"
   end
 end

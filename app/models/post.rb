@@ -23,7 +23,9 @@ class Post < ActiveRecord::Base
   validates :category_id, presence: true, numericality: true
   
   belongs_to :category
+  has_many :comments, :dependent => :destroy
   
   # tags
   acts_as_taggable
+  
 end

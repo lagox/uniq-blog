@@ -1,0 +1,25 @@
+<%= provide(:title, "Модерирование комментариев") %>
+<h1>Модерирование комментариев:</h1>
+<div id="comments-post">
+  <% @comments.each do |c| %>
+  <div class="mod-comment">
+    <div class="mod-title">
+     (<%= c.post.title %>)
+    </div>
+    <div class="commentator-name">
+    <%= c.author || c.user.name %>
+    <div class="comment-date">
+      <%= c.created_at.to_formatted_s(:short) %>
+    </div>
+    <div class="clear"></div>
+    </div>
+    <div class="commentator-comment">
+      <%= c.comment %>  
+    </div>  
+    <div class="mod-actions">
+      <%= link_to "Принять", approve_comment_path(c), :class => "btn btn-primary" %>
+      <%= link_to "Отклонить", c, :method => :delete, :data => {:confirm => "delete?"} %>
+    </div>
+  </div>
+  <% end %>
+</div>

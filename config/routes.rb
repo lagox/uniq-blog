@@ -13,7 +13,11 @@ OnlineBlog::Application.routes.draw do
   
   resources :users
   resources :sessions
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
+  
+  resources :comments
   resources :categories
   
   root :to => 'posts#index'
@@ -22,6 +26,8 @@ OnlineBlog::Application.routes.draw do
   match "/contact", to: "pages#contact"
   match "/search", to: "search#index"
   
+  match "/moder_comment", to: "comments#moder_comment", as: "moder_comment"
+  match "approve_comment/:id", to: "comments#approve_comment", as: "approve_comment"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

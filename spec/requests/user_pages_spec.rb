@@ -17,6 +17,7 @@ describe "UserPages" do
     it "should sign up" do
       visit signup_path
       fill_in "Почта", :with => "foo@bar.com"
+      fill_in "Имя", :with => "Samy"
       fill_in "Пароль", :with => "secretpassword"
       fill_in "Потвердите пароль", :with => "secretpassword"
       click_button "Зарегистрироваться"

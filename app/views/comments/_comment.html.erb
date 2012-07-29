@@ -1,0 +1,12 @@
+<%= div_for comment do %>
+  <div class="commentator-name">
+    <%= comment.author || comment.user.name %>
+    <div class="comment-date">
+      <%= comment.created_at.to_formatted_s(:short) %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="commentator-comment">
+    <%= comment.comment %>  
+  </div>
+<% end %>

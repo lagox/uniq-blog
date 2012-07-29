@@ -3,11 +3,13 @@ class User < ActiveRecord::Base
   
   has_secure_password
   
-  attr_accessible :email, :password, :password_confirmation, :admin
+  attr_accessible :email, :password, :password_confirmation, :admin, :name
   
   validates :email, uniqueness: true
+  validates :name, presence: true
 
   after_validation :set_admin
+  has_many :comments, :dependent => :destroy
   
 private
   

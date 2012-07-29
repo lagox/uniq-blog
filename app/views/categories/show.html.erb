@@ -7,7 +7,26 @@
 <div class="show-post">
   <h3 class="post-title"><%= link_to p.title, p %></h3>
   <div class="post-body"><%= p.post %></div>
-  <div class="post-info"><%= p.created_at.to_formatted_s(:short) %></div>
+  <div class="post-tags">
+    <span class="post-tags-title">
+      <%= tags_icon %>
+    </span>
+    <!-- tags -->
+    <% p.tag_list.each do |t| %>
+      <% if t == p.tag_list.last %>
+        <%= link_to t, tags_path(t) %>
+      <% else  %>
+        <%= link_to t, tags_path(t) %>, 
+      <% end %>
+    <% end %>
+    <!-- end tags -->
+  </div>  
+  <div class="post-info">
+    <%= p.created_at.to_formatted_s(:short) %>
+    <div class="count-comment">
+      <%= link_to comment_icon + " #{p.comments.count}", p %>
+    </div>
+  </div>
 </div>
 <% end %>
 
