@@ -4,7 +4,7 @@ module ApplicationHelper
   include ActsAsTaggableOn::TagsHelper
 
   def title(page_title)
-    basetitle = "Блог Кусаинова Ерлана"
+    basetitle = "Блог Ерлана Кусаинова"
     if page_title.empty?
       basetitle
     else

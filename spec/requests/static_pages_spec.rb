@@ -8,7 +8,7 @@ describe "StaticPages" do
   describe "about page" do
     before { visit about_path }
     
-    it { should have_selector("title", text: "О нас") }
+    it { should have_selector("title", text: "О блоге") }
   end
   
   describe "contact page" do
