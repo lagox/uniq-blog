@@ -41,3 +41,27 @@
 }
 
 // comments:
+#comments-post{
+  margin-top:10px;
+  margin-bottom:20px;
+  .comment{
+    padding:5px;
+    margin-bottom:10px;
+    &:hover{
+      background:#eff2ec;
+    }
+    .commentator-name{
+      font-weight:bold;
+    }
+    .comment-date{
+      display:inline-block;
+      float:right;
+      font-size:11px;
+      color:#8b8994;
+      font-weight:normal !important;
+    }
+    .commentator-comment{
+      margin-top:5px;
+    }
+  }
+}
