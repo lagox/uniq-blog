@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 module ApplicationHelper
   
-  include ActsAsTaggableOn::TagsHelper
+  # include ActsAsTaggableOn::TagsHelper
 
   def title(page_title)
     basetitle = "Блог Ерлана Кусаинова"
