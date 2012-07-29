@@ -24,6 +24,10 @@ module ApplicationHelper
     raw("<i class='icon-tag'></i>")
   end
   
+  def comment_icon
+    raw("<i class='icon-comment'></i>")
+  end
+  
   def find_all_subcategories(category)
     if category.children.size > 0
       ret = "<ul>"

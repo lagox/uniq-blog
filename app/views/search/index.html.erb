@@ -7,6 +7,9 @@
     <div class="post-body"><%= r.post %></div>
     <div class="post-info">
       <%= r.created_at.to_formatted_s(:short)  %>
+      <div class="count-comment">
+        <%= link_to comment_icon + " #{r.comments.count}", p %>
+      </div>
     </div>
    </div>
    <% end %>

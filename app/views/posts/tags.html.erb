@@ -21,7 +21,12 @@
     <% end %>
     <!-- end tags -->
   </div>
-  <div class="post-info"><%= p.created_at.to_formatted_s(:short) %></div>
+  <div class="post-info">
+    <%= p.created_at.to_formatted_s(:short) %>
+    <div class="count-comment">
+      <%= link_to comment_icon + " #{p.comments.count}", p %>
+    </div>
+  </div>
   <% if current_user && current_user.admin == true %>
     <div class="admin-actions">
       <%= link_to "edit", edit_post_path(p) %>

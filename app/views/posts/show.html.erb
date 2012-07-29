@@ -18,6 +18,9 @@
   </div>
   <div class="post-info">
     <%= @post.created_at.to_formatted_s(:short)  %>
+    <div class="count-comment">
+      <%= comment_icon + " #{@post.comments.count}"%>
+    </div>
     <% if current_user && current_user.admin == true %>
     <div class="admin-actions">
       <%= link_to "edit", edit_post_path(@post) %>
