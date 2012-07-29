@@ -2,6 +2,20 @@
 <div class="show-post">
   <h1 class="post-title"><%= link_to @post.category.title, @post.category %> → <%= @post.title %></h1>
   <div class="post-body"><%= raw(@post.post) %></div>
+  <div class="post-tags">
+    <span class="post-tags-title">
+      <%= tags_icon %>
+    </span>
+    <!-- tags -->
+    <% @post.tag_list.each do |t| %>
+      <% if t == @post.tag_list.last %>
+        <%= link_to t, tags_path(t) %>
+      <% else  %>
+        <%= link_to t, tags_path(t) %>, 
+      <% end %>
+    <% end %>
+    <!-- end tags -->
+  </div>
   <div class="post-info">
     <%= @post.created_at.to_formatted_s(:short)  %>
     <% if current_user && current_user.admin == true %>

@@ -45,11 +45,9 @@
   margin-top:10px;
   margin-bottom:20px;
   .comment{
+    font-size:12px;
     padding:5px;
     margin-bottom:10px;
-    &:hover{
-      background:#eff2ec;
-    }
     .commentator-name{
       font-weight:bold;
     }
@@ -64,4 +62,7 @@
       margin-top:5px;
     }
   }
+}
+.new_comment{
+  padding-left:5px;
 }
