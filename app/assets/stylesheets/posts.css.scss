@@ -40,35 +40,7 @@
   text-align:right;
 }
 
-// comments:
-#comments-post{
-  margin-top:10px;
-  margin-bottom:20px;
-  .comment{
-    font-size:12px;
-    padding:5px;
-    margin-bottom:10px;
-    .commentator-name{
-      font-weight:bold;
-    }
-    .comment-date{
-      display:inline-block;
-      float:right;
-      font-size:11px;
-      color:#8b8994;
-      font-weight:normal !important;
-    }
-    .commentator-comment{
-      color:#626361;
-      margin-top:5px;
-      text-align:justify;
-      line-height:1.5em;
-    }
-  }
-}
-.new_comment{
-  padding-left:5px;
-}
+
 
 // recaptcha
 .recaptcha_field{

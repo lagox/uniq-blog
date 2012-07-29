@@ -1,5 +1,6 @@
 <div id="sidebar" class="span3">
   <% if current_user && current_user.admin == true %>
+    <h4 class="moder-com"><%= link_to "Модерация комментариев", moder_comment_path %></h4>
     <h4><%= link_to "Категории:", categories_path %></h4>
 
   <% end %>
