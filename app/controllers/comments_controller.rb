@@ -2,14 +2,19 @@
 class CommentsController < ApplicationController
   
   before_filter :load_post
-  
+    
   def create
     @comment = @post.comments.new(params[:comment])
-    if @comment.save
-      redirect_to @post, notice: "Комментарий успешно добавлен"
+    if params[:result] == params[:hidden_result]
+      if @comment.save
+        redirect_to @post, notice: "Комментарий успешно добавлен"
+      else
+        redirect_to @post, notice: "Комментарий не добавлен"
+      end  
     else
-      redirect_to @post, notice: "Комментарий не добавлен"
+      redirect_to @post, notice: "Каптча не верна"  
     end
+    
   end
   
   def destroy

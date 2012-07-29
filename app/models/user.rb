@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :admin, :name
   
   validates :email, uniqueness: true
+  validates :name, presence: true
 
   after_validation :set_admin
   has_many :comments, :dependent => :destroy

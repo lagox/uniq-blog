@@ -27,4 +27,5 @@ class Post < ActiveRecord::Base
   
   # tags
   acts_as_taggable
+  
 end

@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   
   before_filter :load_categories
   before_filter :tag_cloud
-  
+  before_filter :captcha
+    
   def load_categories
     @sidebar_categories = Category.mains
   end
@@ -12,6 +13,12 @@ class ApplicationController < ActionController::Base
   # tag cloud:
   def tag_cloud
     @tags = Post.tag_counts_on(:tags)
+  end
+  
+  def captcha
+    @one = rand(0..9)
+    @two = rand(0..9)
+    @result_captcha = @one + @two
   end
   
   

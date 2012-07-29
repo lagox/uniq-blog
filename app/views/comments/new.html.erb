@@ -14,6 +14,23 @@
   <% end %>
 <% else %>
   <!-- for anonyoumus -->
-  
+    <%= form_for([@post, @post.comments.new]) do |f| %>
+    <div class="field">
+      <%= f.label :author, "Имя:" %>
+      <%= f.text_field :author %>
+    </div>
+    <div class="field">
+      <%= f.label :comment, "Комментарий:" %>
+      <%= f.text_area :comment, :rows => 10 %>
+    </div>
+    <div class="recaptcha_field">
+      <%= @one %> + <%= @two %> = 
+      <%= text_field_tag :result, nil, :class => "captcha" %>
+      <%= hidden_field_tag('hidden_result', @result_captcha ) %>
+    </div>
+    <div class="field">
+      <%= f.submit "Отправить", :class => "btn btn-primary" %>
+    </div>
+  <% end %>
 <% end %>
 
