@@ -6,7 +6,7 @@
 <% @posts.each do |p| %>
 <div class="show-post">
   <h3 class="post-title"><%= link_to p.title, p %></h3>
-  <div class="post-body"><%= p.post %></div>
+  <div class="post-body"><%= raw(more_post(p.post)) %></div>
   <div class="post-tags">
     <span class="post-tags-title">
       <%= tags_icon %>
