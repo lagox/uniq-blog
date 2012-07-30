@@ -207,7 +207,7 @@ DEPENDENCIES
   kaminari
   magic_encoding
   mini_magick
-  mysql2
+  mysql2 (~> 0.3.11)
   rails (= 3.2.6)
   rake (~> 0.9.2.2)
   redactor-rails
