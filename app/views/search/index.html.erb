@@ -4,7 +4,7 @@
    <% @results.each do |r| %>
     <div class="show-post">
     <h3 class="post-title"><%= link_to r.title, r %></h3>
-    <div class="post-body"><%= r.post %></div>
+    <div class="post-body"><%= raw(more_post(r.post)) %></div>
     <div class="post-info">
       <%= r.created_at.to_formatted_s(:short)  %>
       <div class="count-comment">
