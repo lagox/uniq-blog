@@ -2,6 +2,8 @@
 class CommentsController < ApplicationController
   
   before_filter :load_post, :except => [:moder_comment, :destroy, :approve_comment]
+  
+  before_filter :access_only_admin, :only => [:moder_comment]
     
   def create
     @comment = @post.comments.new(params[:comment])
